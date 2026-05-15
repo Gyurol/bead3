@@ -37,8 +37,7 @@ public:
             allapot = JATEK;
             startGomb->lathato = false;
             b1->lathato = true;
-            if (b1->nyeres(jatekos1)) {allapot = GAMEOVER;}
-            if (b1->nyeres(jatekos2) ){allapot = GAMEOVER;}
+
         }
         else if (id == "ujra_btn") {
             allapot = JATEK;

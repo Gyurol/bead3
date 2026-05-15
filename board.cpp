@@ -3,7 +3,7 @@
 #include "widget.hpp"
 #include <algorithm>
 #include <cstdlib>
-
+#include "application.hpp"
 using namespace std;
 using namespace genv;
 
@@ -79,6 +79,9 @@ void board::handle(event ev)
                 for (int i = 5; i >= 0; i--) {
                     if (palya[i][hover_oszlop] == 0) {
                         palya[i][hover_oszlop] = aktualis_jatekos;
+                        if (nyeres(aktualis_jatekos)){
+                                _parent->action("jatek_vege");
+                        }
                         aktualis_jatekos = (aktualis_jatekos == 1) ? 2 : 1;
                         break;
                     }
