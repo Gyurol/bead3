@@ -72,11 +72,11 @@ void board::draw()
 void board::handle(event ev)
 {
     if (ev.type == ev_mouse) {
-        if (is_selected(ev.pos_x, ev.pos_y)) {
+        if (is_selected(ev.pos_x, ev.pos_y )) {
             int cell_w = _size_x / 7;
             hover_oszlop = (ev.pos_x - _x) / cell_w;
 
-            if (ev.button == btn_left) {
+            if (ev.button == btn_left && rakhato(aktualis_jatekos)==true) {
                 for (int i = 5; i >= 0; i--) {
                     if (palya[i][hover_oszlop] == 0) {
                         palya[i][hover_oszlop] = aktualis_jatekos;
@@ -177,4 +177,11 @@ void board::board_ujra()
     aktualis_jatekos = (rand() % 2) + 1;
     hover_sor = -1;
     hover_oszlop = -1;
+}
+bool board::rakhato(int jatekos)
+{
+    if (nyeres(jatekos) == true){
+        return false;
+    }
+    return true;
 }

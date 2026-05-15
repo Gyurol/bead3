@@ -22,6 +22,7 @@ public:
     bool check_atlo_1(int n);
     bool check_atlo_2(int v);
     void board_ujra();
+    bool rakhato(int a);
 };
 
 

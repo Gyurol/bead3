@@ -22,8 +22,16 @@ void Application::event_loop()
             }
         }
 
-        if (focus != -1 && _widgets[focus]->lathato) {
-            _widgets[focus]->handle(ev);
+        if (ev.type == ev_mouse) {
+            for (Widget * w : _widgets) {
+                if (w->lathato) {
+                    w->handle(ev);
+                }
+            }
+        } else {
+            if (focus != -1 && _widgets[focus]->lathato) {
+                _widgets[focus]->handle(ev);
+            }
         }
 
         gout << move_to(0, 0) << color(0, 0, 0) << box(1200, 1200);
