@@ -23,7 +23,7 @@ public:
 
         startGomb = new Gomb(this, 500, 500, 200, 50, "Jatek Inditasa", "start_btn");
         b1 = new board(this, 100, 150, 1000, 1000);
-        ujraGomb = new Gomb(this, 500, 600, 200, 50, "Ujra", "ujra_btn");
+        ujraGomb = new Gomb(this, 300, 100, 300, 150, "Ujra", "ujra_btn");
 
         startGomb->lathato = true;
         b1->lathato = false;
@@ -43,10 +43,13 @@ public:
             allapot = JATEK;
             ujraGomb->lathato = false;
             b1->lathato = true;
+            b1->board_ujra();
         }
         else if (id == "jatek_vege") {
+
             allapot = GAMEOVER;
             ujraGomb->lathato = true;
+
         }
     }
 };

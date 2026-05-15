@@ -803,7 +803,7 @@
 
 1778592101 c:\users\gyuri\downloads\graph64_2024\graph64_2024\graphicslib\keytbl.h
 
-1778849767 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\main.cpp
+1778852633 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\main.cpp
 	"application.hpp"
 	"board.hpp"
 	"Gomb.hpp"
@@ -854,14 +854,15 @@
 	<cstdlib>
 	<ctime>
 
-1778781305 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.cpp
+1778852611 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.cpp
 	"graphics.hpp"
 	"board.hpp"
 	"widget.hpp"
 	<algorithm>
 	<cstdlib>
+	"application.hpp"
 
-1778780680 c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.hpp
+1778852611 c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.hpp
 	"widget.hpp"
 	<string>
 

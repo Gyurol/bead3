@@ -37,6 +37,7 @@ void board::draw()
             if (cella_tipus == 0 && oszlop == hover_oszlop) {
                 if (sor == 5 || palya[sor + 1][oszlop] != 0) {
                     if (aktualis_jatekos == 1) cella_tipus = 3;
+                    else if (aktualis_jatekos==0) cella_tipus=0;
                     else cella_tipus = 4;
                 }
             }
@@ -164,4 +165,16 @@ bool board::nyeres(int jatekos) {
 
 int board::get_ertek(int sor, int oszlop) {
     return palya[sor][oszlop];
+}
+
+void board::board_ujra()
+{
+    for (int sor = 0; sor < 6; sor++) {
+        for (int oszlop = 0; oszlop < 7; oszlop++) {
+            palya[sor][oszlop] = 0;
+        }
+    }
+    aktualis_jatekos = (rand() % 2) + 1;
+    hover_sor = -1;
+    hover_oszlop = -1;
 }
