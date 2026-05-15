@@ -816,7 +816,7 @@
 	<string>
 	<vector>
 
-1778856205 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\application.cpp
+1778856587 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\application.cpp
 	"graphics.hpp"
 	"application.hpp"
 	<vector>
@@ -829,10 +829,10 @@
 	<string>
 	"graphics.hpp"
 
-1778780647 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\gomb.cpp
+1778856587 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\gomb.cpp
 	"gomb.hpp"
-	<string>
 	"application.hpp"
+	"graphics.hpp"
 
 1778780647 c:\users\gyuri\downloads\graph64_2024\graph64_2024\gomb.hpp
 	"widget.hpp"
@@ -862,7 +862,7 @@
 	<cstdlib>
 	"application.hpp"
 
-1778855744 c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.hpp
+1778858405 c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.hpp
 	"widget.hpp"
 	<string>
 

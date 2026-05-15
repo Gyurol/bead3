@@ -10,6 +10,7 @@ protected:
     std::vector<std::vector<int>> palya;
     int aktualis_jatekos;
     int hover_sor, hover_oszlop;
+    int lepesszam;
 public:
     board(Application *parent, int, int, int, int);
     void draw() override;
@@ -23,6 +24,7 @@ public:
     bool check_atlo_2(int v);
     void board_ujra();
     bool rakhato(int a);
+
 };
 
 

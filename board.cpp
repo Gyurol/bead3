@@ -18,6 +18,7 @@ board::board(Application *parent, int x, int y, int sx, int sy) : Widget(parent,
 
     hover_sor = -1;
     hover_oszlop = -1;
+    lepesszam = 0;
 }
 
 void board::draw()
@@ -76,7 +77,7 @@ void board::handle(event ev)
             int cell_w = _size_x / 7;
             hover_oszlop = (ev.pos_x - _x) / cell_w;
 
-            if (ev.button == btn_left && rakhato(aktualis_jatekos)==true) {
+            if (ev.button == btn_left && rakhato(aktualis_jatekos)==true ) {
                 for (int i = 5; i >= 0; i--) {
                     if (palya[i][hover_oszlop] == 0) {
                         palya[i][hover_oszlop] = aktualis_jatekos;
@@ -84,6 +85,7 @@ void board::handle(event ev)
                                 _parent->action("jatek_vege");
                         }
                         aktualis_jatekos = (aktualis_jatekos == 1) ? 2 : 1;
+                        lepesszam++;
                         break;
                     }
                 }
@@ -185,3 +187,7 @@ bool board::rakhato(int jatekos)
     }
     return true;
 }
+
+
+
+
