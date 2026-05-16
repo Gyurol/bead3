@@ -66,6 +66,10 @@ void board::draw()
                     }
                 }
             }
+            if (nyeres(aktualis_jatekos))
+            {
+                gout << color(100,100,100)<<move_to(_x,_y) << box(_x+20, _y+10) << text("nyert");
+            }
         }
     }
 }
@@ -77,7 +81,7 @@ void board::handle(event ev)
             int cell_w = _size_x / 7;
             hover_oszlop = (ev.pos_x - _x) / cell_w;
 
-            if (ev.button == btn_left && rakhato(aktualis_jatekos)==true ) {
+            if (ev.button == btn_left && nyeres(aktualis_jatekos)==false) {
 
                 for (int i = 5; i >= 0; i--) {
                     if (palya[i][hover_oszlop] == 0) {
