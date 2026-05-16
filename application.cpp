@@ -6,6 +6,7 @@ using namespace genv;
 
 void Application::event_loop()
 {
+    gout.open(1200, 1200);
     event ev;
     int focus = -1;
 

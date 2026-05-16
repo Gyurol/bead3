@@ -18,7 +18,6 @@ class Myapp : public Application {
 
 public:
     Myapp() {
-        genv::gout.open(1200, 1200);
         allapot = KEZDOKEPERNYO;
 
         startGomb = new Gomb(this, 500, 500, 200, 50, "Jatek Inditasa", "start_btn");
