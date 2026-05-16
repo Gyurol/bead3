@@ -15,7 +15,7 @@ public:
     board(Application *parent, int, int, int, int);
     void draw() override;
     void handle(genv::event) override;
-    int get_ertek(int d, int a);
+    int get_ertek(int a,int b);
     int turn();
     bool nyeres(int o);
     bool check_vizszintes(int c);
@@ -24,7 +24,7 @@ public:
     bool check_atlo_2(int v);
     void board_ujra();
     bool rakhato(int a);
-
+    bool dontetlen();
 };
 
 

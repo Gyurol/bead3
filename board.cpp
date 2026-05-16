@@ -78,14 +78,15 @@ void board::handle(event ev)
             hover_oszlop = (ev.pos_x - _x) / cell_w;
 
             if (ev.button == btn_left && rakhato(aktualis_jatekos)==true ) {
+
                 for (int i = 5; i >= 0; i--) {
                     if (palya[i][hover_oszlop] == 0) {
                         palya[i][hover_oszlop] = aktualis_jatekos;
-                        if (nyeres(aktualis_jatekos)){
+                                lepesszam++;
+                        if (nyeres(aktualis_jatekos) || (dontetlen() == true)){
                                 _parent->action("jatek_vege");
                         }
                         aktualis_jatekos = (aktualis_jatekos == 1) ? 2 : 1;
-                        lepesszam++;
                         break;
                     }
                 }
@@ -94,7 +95,6 @@ void board::handle(event ev)
         } else {
             hover_oszlop = -1;
         }
-
     }
 
 bool board::check_vizszintes(int jatekos) {
@@ -165,8 +165,8 @@ bool board::nyeres(int jatekos) {
 }
 
 
-int board::get_ertek(int sor, int oszlop) {
-    return palya[sor][oszlop];
+int board::get_ertek(int a, int b) {
+    return lepesszam;
 }
 
 void board::board_ujra()
@@ -179,6 +179,7 @@ void board::board_ujra()
     aktualis_jatekos = (rand() % 2) + 1;
     hover_sor = -1;
     hover_oszlop = -1;
+    lepesszam=0;
 }
 bool board::rakhato(int jatekos)
 {
@@ -188,6 +189,10 @@ bool board::rakhato(int jatekos)
     return true;
 }
 
+bool board::dontetlen(){
+    if (lepesszam == 42) return true;
+    return false;
+}
 
 
 

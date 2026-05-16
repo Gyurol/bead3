@@ -854,7 +854,7 @@
 	<cstdlib>
 	<ctime>
 
-1778855964 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.cpp
+1778909987 source:c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.cpp
 	"graphics.hpp"
 	"board.hpp"
 	"widget.hpp"
@@ -862,7 +862,7 @@
 	<cstdlib>
 	"application.hpp"
 
-1778858405 c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.hpp
+1778909579 c:\users\gyuri\downloads\graph64_2024\graph64_2024\board.hpp
 	"widget.hpp"
 	<string>
 
