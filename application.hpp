@@ -11,7 +11,6 @@ protected:
 
 public:
     virtual void action(string id) = 0;
-    application();
     virtual ~Application(){}
     void register_widget(Widget *w);
     void event_loop();

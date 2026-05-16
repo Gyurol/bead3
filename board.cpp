@@ -66,10 +66,6 @@ void board::draw()
                     }
                 }
             }
-            if (nyeres(aktualis_jatekos))
-            {
-                gout << color(100,100,100)<<move_to(_x,_y) << box(_x+20, _y+10) << text("nyert");
-            }
         }
     }
 }
@@ -81,7 +77,7 @@ void board::handle(event ev)
             int cell_w = _size_x / 7;
             hover_oszlop = (ev.pos_x - _x) / cell_w;
 
-            if (ev.button == btn_left && nyeres(aktualis_jatekos)==false) {
+            if (ev.button == btn_left && nyeres(1)==false && nyeres(2) == false && dontetlen()==false) {
 
                 for (int i = 5; i >= 0; i--) {
                     if (palya[i][hover_oszlop] == 0) {
@@ -185,13 +181,7 @@ void board::board_ujra()
     hover_oszlop = -1;
     lepesszam=0;
 }
-bool board::rakhato(int jatekos)
-{
-    if (nyeres(jatekos) == true){
-        return false;
-    }
-    return true;
-}
+
 
 bool board::dontetlen(){
     if (lepesszam == 42) return true;

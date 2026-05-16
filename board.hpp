@@ -16,14 +16,12 @@ public:
     void draw() override;
     void handle(genv::event) override;
     int get_ertek(int a,int b);
-    int turn();
     bool nyeres(int o);
     bool check_vizszintes(int c);
     bool check_fuggoleges(int k);
     bool check_atlo_1(int n);
     bool check_atlo_2(int v);
     void board_ujra();
-    bool rakhato(int a);
     bool dontetlen();
 };
 
